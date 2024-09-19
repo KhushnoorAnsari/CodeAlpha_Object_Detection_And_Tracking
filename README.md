@@ -1,7 +1,3 @@
-Here's the updated `README.md` with the inclusion of `python tracker.py` and information about the guidance you mentioned:
-
----
-
 # CodeAlpha Object Detection and Tracking
 
 This repository contains a project for object detection and tracking using the YOLOv8 model. It includes frame capture from videos, object detection using a pre-trained YOLOv8 model, and custom object tracking. Below are details of each file in the repository.
