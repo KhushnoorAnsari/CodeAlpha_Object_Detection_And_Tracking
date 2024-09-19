@@ -1,112 +1,120 @@
+Here's the updated `README.md` with the inclusion of `python tracker.py` and information about the guidance you mentioned:
+
+---
+
 # CodeAlpha Object Detection and Tracking
 
-## Overview
+This repository contains a project for object detection and tracking using the YOLOv8 model. It includes frame capture from videos, object detection using a pre-trained YOLOv8 model, and custom object tracking. Below are details of each file in the repository.
 
-This project involves object detection and tracking using the YOLOv8 model and a custom tracker implementation. It processes video frames to detect and track objects, drawing bounding boxes around them and assigning unique IDs for tracking.
+## Files
 
-### Features
-- Object detection with YOLOv8.
-- Real-time object tracking with a custom tracker.
-- Frame capture and saving from video.
+### 1. `capture_frames.py`
+This script captures frames from the video `surf.mp4` and saves them as images.
 
-## Installation
+- Captures up to 100 frames from the video.
+- Frames are resized, flipped, and saved in the `images-surf/` directory as `.jpg` files.
+  
+#### Usage:
+Run this script to capture frames from the video:
+```bash
+python capture_frames.py
+```
+
+### 2. `tracker.py`
+A custom tracker class that keeps track of objects across video frames. It uses the Euclidean distance between object centers to maintain consistent IDs for each object.
+
+#### Features:
+- **Object Center Tracking**: Each object is assigned an ID based on its center coordinates.
+- **New Object Detection**: New objects are assigned unique IDs.
+- **ID Consistency**: The object’s ID is maintained across frames if detected within a defined threshold distance.
+
+#### Usage:
+To run the tracker independently, execute:
+```bash
+python tracker.py
+```
+
+### 3. `object_detection_tracking.py`
+This is the core script that integrates YOLOv8 object detection and tracking.
+
+#### Features:
+- **YOLOv8 Detection**: Utilizes the YOLOv8 model for object detection from the video `surf.mp4`.
+- **Custom Tracker Integration**: Tracks detected objects across frames using the `Tracker` class.
+- **Real-Time Processing**: Displays the processed video with bounding boxes and object IDs in real-time.
+
+#### Usage:
+Ensure the necessary models and dependencies are installed and run the script:
+```bash
+python object_detection_tracking.py
+```
+
+### 4. `yolov8_object_detection_on_custom_dataset.ipynb`
+This Jupyter Notebook walks through installing YOLOv8 and running it on a custom dataset.
+
+#### Features:
+- **YOLOv8 Installation**: Step-by-step instructions for installing YOLOv8.
+- **Pre-trained Model Inference**: Demonstrates using YOLOv8’s pre-trained model for inference.
+- **Custom Training**: Walkthrough of training YOLOv8 on a custom dataset (e.g., `freedomtech.zip`).
+
+#### How to Use:
+1. Run the notebook cells to set up YOLOv8.
+2. Follow instructions to train YOLOv8 on your custom dataset.
+
+---
+
+## Setup and Requirements
 
 ### Prerequisites
+- **Python 3.x**
+- **OpenCV**
+- **Pandas**
+- **NumPy**
+- **Ultralytics YOLOv8**
 
-- Python 3.8 or higher
-- Required Python libraries (see `requirements.txt`)
+### Installation
 
-### Setup
-
-1. **Clone the repository:**
-
+1. Install the required Python libraries:
    ```bash
-   git clone https://github.com/KhushnoorAnsari/KhushnoorAnsari.git
+   pip install ultralytics==8.0.20 opencv-python pandas numpy
    ```
 
-2. **Navigate to the project directory:**
-
+2. (Optional) If working with the Jupyter notebook, ensure you have Jupyter installed:
    ```bash
-   cd CodeAlpha_Object_Detection_And_Tracking
+   pip install notebook
    ```
 
-3. **Install the required packages:**
+## Running the Project
 
-   You can install the required packages using `pip`:
+1. **Capture Frames**:
+   Run `capture_frames.py` to extract frames from the video file `surf.mp4`.
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+2. **Object Detection and Tracking**:
+   Run `object_detection_tracking.py` to perform object detection and tracking on the video in real-time.
 
-4. **Download the YOLOv8 model:**
+3. **Train YOLOv8 on a Custom Dataset**:
+   Follow the steps in `yolov8_object_detection_on_custom_dataset.ipynb` to train the YOLOv8 model on your custom dataset.
 
-   Place your YOLOv8 model file (`best.pt`) in the project directory.
+---
 
-5. **Prepare your class labels:**
+## Guidance and Learning
 
-   Ensure you have a file named `Coco.txt` with your class labels, one per line.
+This project was completed as part of an internship with **Code Alpha**, where self-driven learning is emphasized. While no direct guidance was provided during the process, the experience allowed for deep self-learning through problem-solving and independent research.
 
-## Usage
+Resources such as YouTube tutorials and GitHub repositories were utilized to complete the object detection and tracking implementation, specifically leveraging guidance from a [YouTube video](https://youtu.be/-CGr7ryOH98?si=2KMKdZx_5Hs4kU0F) and its associated [GitHub repository](https://github.com/freedomwebtech/yolov8-custom-object-training-tracking).
 
-### Capturing Frames from Video
+---
 
-To capture frames from a video and save them as images, run the `img.py` script:
+## Acknowledgments
 
-```bash
-python img.py
-```
-
-This script will save frames from the video `surf.mp4` to the `images-surf` directory.
-
-### Object Detection and Tracking
-
-To perform object detection and tracking on a video, run the `detect.py` script:
-
-```bash
-python detect.py
-```
-
-This script uses the YOLOv8 model to detect objects in `surf.mp4` and tracks them using the custom `Tracker` class.
-
-## Code Structure
-
-- `img.py`: Captures frames from a video and saves them as images.
-- `tracker.py`: Defines a custom `Tracker` class for object tracking.
-- `detect.py`: Performs object detection and tracking, displaying results in real-time.
-- `best.pt`: Pre-trained YOLOv8 model file.
-- `Coco.txt`: File containing class names used for object detection.
-
-## Requirements
-
-The project depends on the following Python libraries:
-
-- `opencv-python`
-- `pandas`
-- `numpy`
-- `ultralytics`
-
-You can install these libraries using the `requirements.txt` file:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Guidance
-
-This project was completed with guidance from the following resources:
-
-- YouTube Video: [YOLOv8 Custom Object Training & Tracking](https://youtu.be/-CGr7ryOH98?si=2KMKdZx_5Hs4kU0F)
-- GitHub Repository: [freedomwebtech/yolov8-custom-object-training-tracking](https://github.com/freedomwebtech/yolov8-custom-object-training-tracking)
+- YOLOv8 model provided by [Ultralytics](https://ultralytics.com).
+- Training and object detection workflow inspired by community tutorials and resources.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE).
 
-## Acknowledgments
-
-- YOLOv8 for object detection.
-- OpenCV for computer vision functionalities.
 
 ## Contact
 
-For questions or comments, please reach out to khushnoor1.ggitbca.2020@gmail.com
+For questions or comments, please reach out to [us](khushnoor1.ggitbca.2020@gmail.com)
+
