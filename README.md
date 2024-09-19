@@ -50,7 +50,7 @@ This Jupyter Notebook walks through installing YOLOv8 and running it on a custom
 #### Features:
 - **YOLOv8 Installation**: Step-by-step instructions for installing YOLOv8.
 - **Pre-trained Model Inference**: Demonstrates using YOLOv8’s pre-trained model for inference.
-- **Custom Training**: Walkthrough of training YOLOv8 on a custom dataset (e.g., `freedomtech.zip`).
+- **Custom Training**: Walkthrough of training YOLOv8 on a custom dataset (e.g., `Data.zip`).
 
 #### How to Use:
 1. Run the notebook cells to set up YOLOv8.
@@ -96,7 +96,7 @@ This Jupyter Notebook walks through installing YOLOv8 and running it on a custom
 
 This project was completed as part of an internship with **Code Alpha**, where self-driven learning is emphasized. While no direct guidance was provided during the process, the experience allowed for deep self-learning through problem-solving and independent research.
 
-Resources such as YouTube tutorials and GitHub repositories were utilized to complete the object detection and tracking implementation, specifically leveraging guidance from a [YouTube video](https://youtu.be/-CGr7ryOH98?si=2KMKdZx_5Hs4kU0F) and its associated [GitHub repository](https://github.com/freedomwebtech/yolov8-custom-object-training-tracking).
+Resources such as YouTube tutorials and GitHub repositories were utilized to complete the object detection and tracking implementation, specifically leveraging guidance from a [YouTube video](https://youtu.be/-CGr7ryOH98?si=2KMKdZx_5Hs4kU0F)for the tutorial and examples used in this project and its associated [GitHub repository](https://github.com/freedomwebtech/yolov8-custom-object-training-tracking)for the code and techniques referenced in this project.
 
 ---
 
@@ -107,7 +107,7 @@ Resources such as YouTube tutorials and GitHub repositories were utilized to com
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE).
+This project is licensed under the MIT License - see the [MIT LICENSE](LICENSE).
 
 
 ## Contact
