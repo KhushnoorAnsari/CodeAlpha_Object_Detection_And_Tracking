@@ -112,5 +112,5 @@ This project is licensed under the MIT License - see the [MIT LICENSE](LICENSE).
 
 ## Contact
 
-For questions or comments, please reach out to [us](khushnoor1.ggitbca.2020@gmail.com)
+For questions or comments, please reach out to [us](khushnoor7525.2020@gmail.com)
 
