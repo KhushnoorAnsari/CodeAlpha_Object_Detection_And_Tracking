@@ -1,9 +1,9 @@
 # CodeAlpha Object Detection and Tracking
 
 This repository contains a project for object detection and tracking using the YOLOv8 model. It includes frame capture from videos, object detection using a pre-trained YOLOv8 model, and custom object tracking. Below are details of each file in the repository.
-
+---
 ## Files
-
+---
 ### 1. `capture_frames.py`
 This script captures frames from the video `surf.mp4` and saves them as images.
 
@@ -15,7 +15,7 @@ Run this script to capture frames from the video:
 ```bash
 python capture_frames.py
 ```
-
+---
 ### 2. `tracker.py`
 A custom tracker class that keeps track of objects across video frames. It uses the Euclidean distance between object centers to maintain consistent IDs for each object.
 
@@ -29,7 +29,7 @@ To run the tracker independently, execute:
 ```bash
 python tracker.py
 ```
-
+---
 ### 3. `object_detection_tracking.py`
 This is the core script that integrates YOLOv8 object detection and tracking.
 
@@ -43,7 +43,7 @@ Ensure the necessary models and dependencies are installed and run the script:
 ```bash
 python object_detection_tracking.py
 ```
-
+---
 ### 4. `yolov8_object_detection_on_custom_dataset.ipynb`
 This Jupyter Notebook walks through installing YOLOv8 and running it on a custom dataset.
 
@@ -67,6 +67,8 @@ This Jupyter Notebook walks through installing YOLOv8 and running it on a custom
 - **NumPy**
 - **Ultralytics YOLOv8**
 
+---
+
 ### Installation
 
 1. Install the required Python libraries:
@@ -78,6 +80,7 @@ This Jupyter Notebook walks through installing YOLOv8 and running it on a custom
    ```bash
    pip install notebook
    ```
+---
 
 ## Running the Project
 
@@ -105,10 +108,13 @@ Resources such as YouTube tutorials and GitHub repositories were utilized to com
 - YOLOv8 model provided by [Ultralytics](https://ultralytics.com).
 - Training and object detection workflow inspired by community tutorials and resources.
 
+---
+
 ## License
 
 This project is licensed under the MIT License - see the [MIT LICENSE](LICENSE).
 
+---
 
 ## Contact
 
